@@ -49,6 +49,48 @@ Readmission rates increase with patient age
 Patients who are readmitted tend to have higher medication counts
 Minimal difference in readmission rates between genders.
 
+# Key Insights  
+
+- Readmission risk increases significantly with age  
+  → Elderly patients represent the highest-risk group  
+
+- Higher medication count is associated with increased readmissions  
+  → Indicates potential polypharmacy risk and treatment complexity  
+
+- Patients readmitted within 30 days have the highest medication burden 
+  → Suggests possible issues in treatment effectiveness or discharge planning  
+
+- Gender is not a significant predictor of readmission risk  
+  → Minimal variation observed between male and female patients  
+
+- Average Length of Stay is 4 days 
+  → Requires further analysis to determine its direct impact on readmissions  
+
+- High-risk patient profile identified: 
+  → Elderly patients + high medication count + frequent readmissions
+
+#  Recommendations  
+
+- Target High-Risk Patients 
+  Focus on elderly patients with frequent hospital visits  
+
+- Optimize Medication Management 
+  Reduce unnecessary medications and monitor polypharmacy risks  
+
+- Enhance Post-Discharge Follow-Up  
+  Implement follow-up calls within 7–30 days after discharge  
+
+- Improve Discharge Planning 
+  Ensure patients clearly understand medications and care plans  
+
+- Leverage Predictive Analytics (Next Step) 
+  Build models to identify high-risk patients before discharge
+  
+
+
+
+
+
 - Tools & Technologies
 SQL Server – Data cleaning & analysis
 Power BI – Dashboard & visualization
