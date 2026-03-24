@@ -52,7 +52,9 @@ Average medications by readmission status
 Slicers for age, gender, and readmission category
 The dashboard enables quick identification of high‑risk patient groups.
 
-Analysis/blob/main/Diabetics_Analysis_Dashboard%20.png
+![Dashboard](https://github.com/AnfalHaroon/Diabetes-Readmission-Analysis/blob/main/Diabetics_Analysis_Dashboard%20.png?raw=true)
+
+
 
  Key Observations (Derived from Analysis)
 Readmission rates increase with patient age
