@@ -69,6 +69,9 @@ Minimal difference in readmission rates between genders.
 - High-risk patient profile identified: 
   → Elderly patients + high medication count + frequent readmissions
 
+  -  Early readmissions (<30 days) show higher medication usage compared to non-readmitted patients  
+  → Indicates potential gaps in discharge effectiveness
+
 #  Recommendations  
 
 - Target High-Risk Patients 
