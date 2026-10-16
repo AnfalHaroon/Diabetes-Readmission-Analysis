@@ -2,17 +2,27 @@
  
 # Project Overview
 
-This project analyzes hospital readmission patterns among diabetic patients using the Diabetes 130‑US Hospitals (1999–2008) dataset. The goal is to identify key drivers of readmissions and present actionable healthcare KPIs through SQL analysis and an interactive Power BI dashboard.
+This project analyzes hospital readmission patterns among diabetic patients using the 
+Diabetes 130‑US Hospitals (1999–2008) 
+dataset. 
+
+The goal is to identify key drivers of readmissions and present actionable healthcare KPIs through SQL analysis and an interactive Power BI dashboard.
+
 The project simulates a real‑world Healthcare Data Analyst workflow, from data cleaning to KPI reporting and 
 visualization.
 
 #Business Problem
 
 Hospital readmissions increase healthcare costs and indicate potential gaps in quality of care.
+
 Key questions addressed:
+
 What is the overall readmission rate for diabetic patients?
+
 Which age groups have higher readmission risk?
+
 Is readmission associated with length of stay or medication count?
+
 Are there differences in readmission rates by gender?
 
 #  Dataset Information
@@ -25,9 +35,9 @@ Domain: Electronic Health Records (EHR)
  
 Data cleaning and transformation were performed using SQL:
 
-Removed invalid and unknown values ("?", NULLs)
-Converted numeric fields to appropriate data types
-Selected clinically relevant columns for analysis
+Converted placeholder values ("?", "None") to NULL
+Removed rows with missing gender, age, or readmission status
+
 Created a final analytics table for reporting
 Final table used:
 dbo.final_diabetic_analytics
@@ -75,7 +85,7 @@ Minimal difference in readmission rates between genders.
 - Gender is not a significant predictor of readmission risk  
   → Minimal variation observed between male and female patients  
 
-- Average Length of Stay is 4 days 
+- Average Length of Stay is 4.4 days 
   → Requires further analysis to determine its direct impact on readmissions  
 
 - High-risk patient profile identified: 
@@ -102,7 +112,8 @@ Minimal difference in readmission rates between genders.
   Build models to identify high-risk patients before discharge
   
 # Tools & Technologies
- 
-SQL Server – Data cleaning & analysis
-Power BI – Dashboard & visualization
-Healthcare Metrics – Readmission, LOS, Medication Burden.
+
+SQL Server – data cleaning and analysis
+- Power BI – dashboard and visualization
+- Healthcare metrics – readmission rate, length of stay, medication burden
+
