@@ -69,52 +69,83 @@ https://github.com/AnfalHaroon/Diabetes-Readmission-Analysis/blob/main/Diabetic_
 
  Key Observations (Derived from Analysis)
 Readmission rates increase with patient age
-Patients who are readmitted tend to have higher medication counts
-Minimal difference in readmission rates between genders.
+Patients who are readmitted # Diabetes Hospital Readmission Analysis
 
-# Key Insights  
+## Project Overview
 
-- Readmission risk increases significantly with age
-  → Elderly patients represent the highest-risk group
+This project analyzes hospital readmission patterns among diabetic patients using the Diabetes 130-US Hospitals (1999–2008) dataset. The goal is to explore factors associated with readmission and present healthcare KPIs through SQL analysis and an interactive Power BI dashboard.
 
-- Higher medication count is associated with increased readmissions  
-  → Indicates potential polypharmacy risk and treatment complexity  
+The project follows a Healthcare Data Analyst workflow: data cleaning, KPI calculation, and visualization.
 
-- Patients readmitted within 30 days have the highest medication burden 
-  → Suggests possible issues in treatment effectiveness or discharge planning  
+## Business Problem
 
-- Gender is not a significant predictor of readmission risk  
-  → Minimal variation observed between male and female patients  
+Hospital readmissions increase healthcare costs and may indicate gaps in quality of care. Key questions:
 
-- Average Length of Stay is 4.4 days 
-  → Requires further analysis to determine its direct impact on readmissions  
+- What is the overall readmission rate for diabetic patients?
+- Which age groups have a higher readmission rate?
+- Is readmission associated with length of stay or medication count?
+- Are there differences in readmission rates by gender?
 
-- High-risk patient profile identified: 
-  → Elderly patients + high medication count + frequent readmissions
+## Dataset Information
 
-  -  Early readmissions (<30 days) show higher medication usage compared to non-readmitted patients  
-  → Indicates potential gaps in discharge effectiveness
+- **Source:** Kaggle – Diabetes 130-US Hospitals Dataset
+- **Time period:** 1999–2008
+- **Records:** ~101,766 hospital encounters
+- **Domain:** Electronic Health Records (EHR)
 
-#  Recommendations  
+## Data Preparation (SQL)
 
-- Target High-Risk Patients 
-  Focus on elderly patients with frequent hospital visits  
+- Converted placeholder values ("?", "None") to NULL
+- Removed rows with missing gender, age, or readmission status
+- Converted numeric fields to appropriate data types
+- Selected relevant columns for analysis
+- Created the final analytics table: `dbo.final_diabetic_analytics`
 
-- Optimize Medication Management 
-  Reduce unnecessary medications and monitor polypharmacy risks  
+## Key KPIs
 
-- Enhance Post-Discharge Follow-Up  
-  Implement follow-up calls within 7–30 days after discharge  
+- Total Encounters: 101,766
+- Overall Readmission Rate: 46% (includes both <30 and >30 days)
+- 30-Day Readmission Rate: 11%
+- Average Length of Stay: 4.4 days
+- Average Number of Medications: 16.0
 
-- Improve Discharge Planning 
-  Ensure patients clearly understand medications and care plans  
+## Power BI Dashboard
 
-- Leverage Predictive Analytics (Next Step) 
-  Build models to identify high-risk patients before discharge
-  
-# Tools & Technologies
+The interactive dashboard includes:
 
-SQL Server – data cleaning and analysis
+- KPI cards for high-level monitoring
+- Readmission rate by age group
+- Readmission rate by gender
+- Average medications by readmission status
+- Slicers for age, gender, and readmission category
+
+
+
+![Dashboard](images/dashboard.png)
+
+
+
+## Key Insights
+
+- **Age:** Readmission rate rises with age, from about 18% (ages 0-10) to about 48% (ages 70-90), then drops to about 40% for ages 90-100.
+- **Medications:** Patients readmitted within 30 days have a slightly higher average medication count (16.9 vs 15.7 for non-readmitted), which may reflect higher clinical complexity.
+- **Gender:** Minimal difference between female (46.9%) and male (45.1%) patients.
+- **Length of stay:** The average stay is 4.4 days; its direct relationship with readmission needs further analysis.
+
+## Recommendations
+
+- **Target high-risk groups:** Focus follow-up on patients aged 70-90.
+- **Review medication management:** Monitor polypharmacy risks in complex cases.
+- **Strengthen post-discharge follow-up:** Consider follow-up calls within 7–30 days after discharge.
+- **Improve discharge planning:** Ensure patients clearly understand medications and care plans.
+- **Next step:** Build predictive models to identify high-risk patients before discharge.
+
+## Limitations
+
+Observational data (1999–2008). The findings show associations, not causation.
+
+## Tools & Technologies
+
+- SQL Server – data cleaning and analysis
 - Power BI – dashboard and visualization
 - Healthcare metrics – readmission rate, length of stay, medication burden
-
