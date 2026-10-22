@@ -119,12 +119,6 @@ The interactive dashboard includes:
 - Average medications by readmission status
 - Slicers for age, gender, and readmission category
 
-
-
-![Dashboard](images/dashboard.png)
-
-
-
 ## Key Insights
 
 - **Age:** Readmission rate rises with age, from about 18% (ages 0-10) to about 48% (ages 70-90), then drops to about 40% for ages 90-100.
